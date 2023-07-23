@@ -16,9 +16,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import Dropdown from './Dropdown';
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Team', 'Projects', 'Events', 'Newletter', 'Policies'];
+const navItems = ['Team', 'Projects', 'Events', 'Newletter', 'Policies'];
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -29,10 +30,12 @@ function DrawerAppBar(props) {
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center', backgroundColor: 'black', minHeight: '100%' }}>
-      <div className="p-2" style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center' }}>
+    <Box sx={{ textAlign: 'center', backgroundColor: 'black', minHeight: '100%' }}>
+        <div className="p-2" style={{ backgroundColor: 'black', display: 'flex', justifyContent: 'center' }}>
             <a href="/"><img width={250} height={70} src="https://res.cloudinary.com/rsmanipal/image/upload/v1615985422/ResearchSoc/RSM_Logo_mne8a2.png" alt="logo"/></a>
         </div>
+        <Dropdown/>
+    <Box onClick={handleDrawerToggle} >
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -43,6 +46,7 @@ function DrawerAppBar(props) {
           </ListItem>
         ))}
       </List>
+    </Box>
     </Box>
   );
 
@@ -67,6 +71,7 @@ function DrawerAppBar(props) {
                 </div>
             
                 <Box className="pt-6" sx={{ display: { xs: 'none', sm: 'block' } }}>
+                    <Dropdown/>
                     {navItems.map((item) => (
                     <Button key={item} sx={{ color: '#fff' }}>
                         {item}
