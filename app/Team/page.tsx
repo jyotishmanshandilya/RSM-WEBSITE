@@ -29,6 +29,7 @@ const page = () => {
             sx={{
               mt: { xs: 10, sm: 11, md: 12, lg: 10 },
               ...responsiveStyles,
+              zIndex: "0",
             }}
             // position="fixed"
           >
