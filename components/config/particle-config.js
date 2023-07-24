@@ -66,7 +66,7 @@ const particlesConfig = {
               "value": "#ff0000",
               "animation": {
                 "enable": true,
-                "speed": 400,
+                "speed": 100,
                 "sync": true
               }
             },
@@ -74,13 +74,13 @@ const particlesConfig = {
               "enable": false
             },
             "links": {
-              "enable": false
+              "enable": true
             },
             "move": {
               "outModes": {
                 "default": "destroy"
               },
-              "speed": 2
+              "speed": 0.5
             },
             "size": {
               "value": 5,
@@ -466,8 +466,8 @@ const particlesConfig = {
       },
       "twinkle": {
         "lines": {
-          "enable": false,
-          "frequency": 0.05,
+          "enable": true,
+          "frequency": 0.01,
           "opacity": 1
         },
         "particles": {
