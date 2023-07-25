@@ -1,3 +1,4 @@
+'use client'
 import Particles from "react-tsparticles";
 import particlesConfig from "./config/particle-config";
 import { useCallback } from "react";
@@ -22,6 +23,7 @@ const ParticleBG = () => {
         width="100vw"
     >
     </Particles>
+
   )
 }
 
