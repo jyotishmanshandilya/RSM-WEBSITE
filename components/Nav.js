@@ -81,11 +81,11 @@ function DrawerAppBar(props) {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{ mr: 2, display: { md: "none" } }}
           >
             <MenuIcon />
           </IconButton>
-          <div className="sm:flex sm:flex-row sm:justify-center xl:gap-x-96 lg:gap-x-80 md:gap-x-72 sm:gap-24">
+          <div className="sm:flex sm:flex-row mx-auto xl:gap-x-80 md:gap-x-24 sm:gap-0">
             <div className="p-3 px-5">
               <a href="/">
                 <img
@@ -97,7 +97,7 @@ function DrawerAppBar(props) {
               </a>
             </div>
 
-            <Box className="pt-6" sx={{ display: { xs: "none", sm: "block" } }}>
+            <Box className="pt-6" sx={{ display: { xs: "none", md: "block" } }}>
               <Dropdown />
               {navItems.map((item) => (
                 <Link href={`${item}`}>
