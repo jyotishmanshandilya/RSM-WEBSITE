@@ -7,6 +7,9 @@ import {
   CardContent,
   CardMedia,
 } from "@mui/material";
+import { societyMembers } from "./BoardMemberArray";
+import DropDownMenue from "./DropDownMenu";
+
 const Photo = ({ src, name }) => {
   return (
     <CardMedia
@@ -29,8 +32,8 @@ const BoardMemberCard = ({ boardCategory, list }) => {
       <Box
         sx={{
           alignItems: "center",
-          paddingX: { xs: "5%", sm: "5%" },
-          marginTop: { xs: "50%", sm: "25%", lg: "20%", xl: "10%" },
+          paddingX: { xs: "5%", sm: "10%" },
+          marginTop: { xs: "35%", sm: "25%", lg: "10%", xl: "5%" },
         }}
       >
         <Typography
@@ -47,33 +50,33 @@ const BoardMemberCard = ({ boardCategory, list }) => {
           return (
             <Stack
               key={member.name}
-              direction={{ xs: "column", md: "row" }}
+              direction={{
+                xs: "column",
+                md: index % 2 === 0 ? "row" : "row-reverse",
+              }}
               spacing={2}
               alignItems="center"
               marginY={2}
-              paddingX={{ xs: "5%", sm: "10%" }}
+              paddingX={1}
             >
-              {index % 2 == 0 && (
-                <Photo src={member.image} name={member.name} />
-              )}
+              <Photo src={member.image} name={member.name} />
 
-              <CardContent>
-                <Typography variant="h5" component="div" color="#fff">
-                  {member.name}
-                </Typography>
-                <Typography variant="h6" component="div" color="#7BD9C6">
-                  {member.post}
-                </Typography>
-                <Typography variant="body2" color="#fff" fontStyle="italic">
-                  {member.researchArea}
-                </Typography>
-                <Typography variant="subtitle2" color="#fff">
-                  {member.message}
-                </Typography>
-              </CardContent>
-              {index % 2 != 0 && (
-                <Photo src={member.image} name={member.name} />
-              )}
+              <Stack alignItems="center">
+                <CardContent>
+                  <Typography variant="h5" component="div" color="#fff">
+                    {member.name}
+                  </Typography>
+                  <Typography variant="h6" component="div" color="#7BD9C6">
+                    {member.post}
+                  </Typography>
+                  <Typography variant="body2" color="#fff" fontStyle="italic">
+                    {member.researchArea}
+                  </Typography>
+                  <Typography variant="subtitle2" color="#fff">
+                    {member.message}
+                  </Typography>
+                </CardContent>
+              </Stack>
             </Stack>
           );
         })}

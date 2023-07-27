@@ -3,7 +3,12 @@ import Nav from "../../components/Nav";
 import { AppBar, Stack, Typography, Grid, Box } from "@mui/material";
 import Link from "next/link";
 import BoardMemberCard from "./BoardMemberCard";
-import { executiveBoard, technicalTeam } from "./BoardMemberArray";
+import {
+  executiveBoard,
+  technicalTeam,
+  societyMembers,
+} from "./BoardMemberArray";
+import DropdownMenu from "./DropDownMenu";
 
 const responsiveStyles = {
   xs: {
@@ -19,17 +24,62 @@ const responsiveStyles = {
 
 const page = () => {
   return (
+    // <>
+    //   <Stack direction="column" alignContent="center">
+    //     <Box sx={{}}>
+    //       <Nav />
+    //     </Box>
+    //     <Box>
+    //       <AppBar
+    //         sx={{
+    //           mt: { xs: 10, sm: 11, md: 12, lg: 10 },
+    //           ...responsiveStyles,
+    //           zIndex: "0",
+    //         }}
+    //         // position="fixed"
+    //       >
+    //         <Typography
+    //           sx={{
+    //             flexGrow: 1,
+    //             textAlign: { xs: "center", sm: "left" },
+    //             color: "white",
+    //           }}
+    //           variant="h5"
+    //         >
+    //           Our Team
+    //         </Typography>
+    //         <Typography textAlign={{ xs: "center", sm: "right" }}>
+    //           <Link href={`/`}>Home</Link> / Team
+    //         </Typography>
+    //       </AppBar>
+    //     </Box>
+    //     <BoardMemberCard
+    //       boardCategory={"executive board"}
+    //       list={executiveBoard}
+    //     />
+    //     <BoardMemberCard
+    //       boardCategory={"TECHNICAL TEAM"}
+    //       list={technicalTeam}
+    //     />
+    //   </Stack>
+    // </>
     <>
       <Stack direction="column" alignContent="center">
         <Box sx={{}}>
           <Nav />
         </Box>
         <Box>
-          <AppBar
+          <Box
+            width={"100%"}
+            height={{ xs: "20%", sm: "10%" }}
             sx={{
               mt: { xs: 10, sm: 11, md: 12, lg: 10 },
               ...responsiveStyles,
-              zIndex: "0",
+              backgroundColor: "#233D33",
+              // alignItems:  "center",
+              // display: "flex",
+              // direction: { xs: "column", md: "row" },
+              zIndex: "1",
             }}
             // position="fixed"
           >
@@ -38,15 +88,20 @@ const page = () => {
                 flexGrow: 1,
                 textAlign: { xs: "center", sm: "left" },
                 color: "white",
+                // margin: { xs: "2%", sm: "1%" },
+                alignContent: "center",
               }}
               variant="h5"
             >
               Our Team
             </Typography>
-            <Typography textAlign={{ xs: "center", sm: "right" }}>
+            <Typography
+              textAlign={{ xs: "center", sm: "right" }}
+              // sx={{ margin: { xs: "1%", sm: "2%" } }}
+            >
               <Link href={`/`}>Home</Link> / Team
             </Typography>
-          </AppBar>
+          </Box>
         </Box>
         <BoardMemberCard
           boardCategory={"executive board"}
@@ -57,6 +112,7 @@ const page = () => {
           list={technicalTeam}
         />
       </Stack>
+      <DropdownMenu title={"Society Members"} items={societyMembers} />
     </>
   );
 };
