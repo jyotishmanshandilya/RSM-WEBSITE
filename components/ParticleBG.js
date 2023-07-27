@@ -15,14 +15,16 @@ const ParticleBG = () => {
     })
 
   return (
-    <Particles 
-        options={particlesConfig}
-        init={particleInit}
-        loaded={particlesLoaded}
-        height="100vh"
-        width="100vw"
-    >
-    </Particles>
+    <div className="absolute inset-0 z-[-1]">
+      <Particles 
+          options={particlesConfig}
+          init={particleInit}
+          loaded={particlesLoaded}
+          height="100vh"
+          width="100vw"
+      >
+      </Particles>
+    </div>
 
   )
 }
