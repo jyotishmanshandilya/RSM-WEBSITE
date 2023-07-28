@@ -28,7 +28,7 @@ const DropdownMenu = ({ title, items }) => {
 
   return (
     <>
-      <Typography align="center" sx={{ margin: "5%" }} fontSize={30}>
+      <Typography align="center" sx={{ margin: "5%" }} fontSize={40}>
         {title.toUpperCase()}
       </Typography>
       <Stack
@@ -56,7 +56,9 @@ const DropdownMenu = ({ title, items }) => {
                   justifyContent: "space-between",
                 }}
               >
-                <Typography align="center">{item.domain}</Typography>
+                <Typography align="center" fontSize={30}>
+                  {item.domain}
+                </Typography>
                 <ArrowDropDownIcon />
               </Button>
               <Menu
@@ -72,12 +74,14 @@ const DropdownMenu = ({ title, items }) => {
                   vertical: "top",
                   horizontal: "left",
                 }}
-                sx={{ background: "transparent" }}
+                sx={{
+                  background: "transparent",
+                }}
               >
                 {item.members.map((member, subIndex) => (
                   <MenuItem
                     key={subIndex}
-                    sx={{ zIndex: "0" }}
+                    sx={{ zIndex: "0", backgroundColor: "none" }}
                     onClick={() => handleClose(index)}
                   >
                     {member}
@@ -97,7 +101,7 @@ const DropdownMenu = ({ title, items }) => {
                 },
               }}
             >
-              <hr />
+              <hr style={{ backgroundColor: "#233D33" }} />
               <Button
                 onClick={(event) => handleClick(event, index)}
                 sx={{
@@ -108,7 +112,9 @@ const DropdownMenu = ({ title, items }) => {
                   alignContent: "center",
                 }}
               >
-                <Typography align="center">{item.domain}</Typography>
+                <Typography align="center" fontSize={30}>
+                  {item.domain}
+                </Typography>
                 <ArrowDropDownIcon sx={{ justifyContent: "left" }} />
               </Button>
               <Menu
@@ -128,7 +134,7 @@ const DropdownMenu = ({ title, items }) => {
                 {item.members.map((member, subIndex) => (
                   <MenuItem
                     key={subIndex}
-                    sx={{ border: "none", backgroundColor: "transparent" }}
+                    sx={{ border: "none", background: "transparent" }}
                     onClick={() => handleClose(index)}
                   >
                     {member}

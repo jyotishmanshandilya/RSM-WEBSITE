@@ -39,7 +39,7 @@ const BoardMemberCard = ({ boardCategory, list }) => {
         <Typography
           variant="body2"
           fontWeight="normal"
-          fontSize={30}
+          fontSize={40}
           color="white"
           align="center"
         >
