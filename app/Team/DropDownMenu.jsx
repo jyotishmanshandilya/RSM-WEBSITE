@@ -8,6 +8,9 @@ import {
   Typography,
   Stack,
   Box,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from "@mui/material";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
@@ -39,110 +42,74 @@ const DropdownMenu = ({ title, items }) => {
         }}
       >
         <Box sx={{ marginX: "2%" }}>
-          {items.slice(0, items.length / 2).map((item, index) => (
-            <Box
-              key={index}
-              sx={{
-                "&:hover": {
-                  backgroundColor: "#233D33",
-                },
-              }}
-            >
-              <hr />
-              <Button
-                onClick={(event) => handleClick(event, index)}
-                sx={{
-                  border: "none",
-                  justifyContent: "space-between",
-                }}
-              >
-                <Typography align="center" fontSize={30}>
-                  {item.domain}
-                </Typography>
-                <ArrowDropDownIcon />
-              </Button>
-              <Menu
-                anchorEl={anchorEl[index]}
-                open={Boolean(anchorEl[index])}
-                onClose={() => handleClose(index)}
-                getContentAnchorEl={null}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-                sx={{
-                  background: "transparent",
-                }}
-              >
-                {item.members.map((member, subIndex) => (
-                  <MenuItem
-                    key={subIndex}
-                    sx={{ zIndex: "0", backgroundColor: "none" }}
-                    onClick={() => handleClose(index)}
-                  >
-                    {member}
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-          ))}
+          {items.slice(0, items.length / 2).map((item, index) => {
+            return (
+              <>
+                <Box
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "#233D33",
+                    },
+                  }}
+                >
+                  <hr style={{ backgroundColor: "#233D33" }} />
+                  <Accordion sx={{ background: "transparent" }}>
+                    <AccordionSummary
+                      expandIcon={<ArrowDropDownIcon color="success" />}
+                    >
+                      <Typography align="center" fontSize={30}>
+                        {item.domain}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography align="center" fontSize={20}>
+                        {item.members.map((member, subIndex) => {
+                          return (
+                            <li style={{ listStyleType: "none" }}>{member}</li>
+                          );
+                        })}
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </Box>
+              </>
+            );
+          })}
         </Box>
         <Box>
-          {items.slice(items.length / 2).map((item, index) => (
-            <Box
-              key={index}
-              sx={{
-                "&:hover": {
-                  backgroundColor: "#233D33",
-                },
-              }}
-            >
-              <hr style={{ backgroundColor: "#233D33" }} />
-              <Button
-                onClick={(event) => handleClick(event, index)}
-                sx={{
-                  border: "none",
-                  "&:hover": {
-                    backgroundColor: "#233D33",
-                  },
-                  alignContent: "center",
-                }}
-              >
-                <Typography align="center" fontSize={30}>
-                  {item.domain}
-                </Typography>
-                <ArrowDropDownIcon sx={{ justifyContent: "left" }} />
-              </Button>
-              <Menu
-                anchorEl={anchorEl[index]}
-                open={Boolean(anchorEl[index])}
-                onClose={() => handleClose(index)}
-                getContentAnchorEl={null}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-              >
-                {item.members.map((member, subIndex) => (
-                  <MenuItem
-                    key={subIndex}
-                    sx={{ border: "none", background: "transparent" }}
-                    onClick={() => handleClose(index)}
-                  >
-                    {member}
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-          ))}
+          {items.slice(items.length / 2).map((item, index) => {
+            return (
+              <>
+                <Box
+                  sx={{
+                    "&:hover": {
+                      backgroundColor: "#233D33",
+                    },
+                  }}
+                >
+                  <hr style={{ backgroundColor: "#233D33" }} />
+                  <Accordion sx={{ background: "transparent" }}>
+                    <AccordionSummary
+                      expandIcon={<ArrowDropDownIcon color="success" />}
+                    >
+                      <Typography align="center" fontSize={30}>
+                        {item.domain}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography align="center" fontSize={20}>
+                        {item.members.map((member, subIndex) => {
+                          return (
+                            <li style={{ listStyleType: "none" }}>{member}</li>
+                          );
+                        })}
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                </Box>
+              </>
+            );
+          })}
         </Box>
       </Stack>
     </>
