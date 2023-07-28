@@ -100,7 +100,7 @@ function DrawerAppBar(props) {
             <Box className="pt-6" sx={{ display: { xs: "none", md: "block" } }}>
               <Dropdown />
               {navItems.map((item) => (
-                <Link href={`${item}`}>
+                <Link href={`/${item}`}>
                   <Button key={item} sx={{ color: "#fff" }}>
                     {item}
                   </Button>

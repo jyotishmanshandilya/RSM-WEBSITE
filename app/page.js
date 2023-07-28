@@ -5,6 +5,7 @@ import Nav from '../components/Nav'
 import Banner from '../components/Banner'
 import About from '../components/About'
 import Domains from '../components/Domains'
+import Contact from '../components/Contact'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Banner/>
       <About/>
       <Domains/>
+      <Contact/>
     </main>
   );
 }
