@@ -24,11 +24,8 @@ const responsiveStyles = {
 
 const page = () => {
   return (
-    <Box sx={{ backgroundColor: "#1c1c1ce1", opacity: "90%" }}>
-      <Stack direction="column" alignContent="center">
-        <Box sx={{}}>
-          <Nav />
-        </Box>
+    <Box sx={{ backgroundColor: "#1c1c1ce1", opacity: "100%" }}>
+      <Stack direction="column" alignContent="center" >
         <Box>
           <Box
             width={"100%"}
@@ -37,6 +34,7 @@ const page = () => {
               mt: { xs: 10, sm: 11, md: 12, lg: 10 },
               ...responsiveStyles,
               backgroundColor: "#233D33",
+              paddingTop: '10px',
               // alignItems:  "center",
               // display: "flex",
               // direction: { xs: "column", md: "row" },
@@ -64,14 +62,14 @@ const page = () => {
             </Typography>
           </Box>
         </Box>
-        <BoardMemberCard
-          boardCategory={"executive board"}
-          list={executiveBoard}
-        />
-        <BoardMemberCard
-          boardCategory={"TECHNICAL TEAM"}
-          list={technicalTeam}
-        />
+          <BoardMemberCard
+            boardCategory={"executive board"}
+            list={executiveBoard}
+          />
+          <BoardMemberCard
+            boardCategory={"TECHNICAL TEAM"}
+            list={technicalTeam}
+          />
       </Stack>
       <DropdownMenu title={"Society Members"} items={societyMembers} />
     </Box>

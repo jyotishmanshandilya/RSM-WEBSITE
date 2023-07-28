@@ -8,8 +8,6 @@ import {
   CardMedia,
 } from "@mui/material";
 import Link from "next/link";
-import { societyMembers } from "./BoardMemberArray";
-import DropDownMenue from "./DropDownMenu";
 
 const Photo = ({ src, name }) => {
   return (
@@ -29,12 +27,12 @@ const Photo = ({ src, name }) => {
 
 const BoardMemberCard = ({ boardCategory, list }) => {
   return (
-    <Stack direction="column" spacing={2} alignItems="center">
+    <Stack direction="column" spacing={2} alignItems="center" className="lg:p-24 p-5">
       <Box
         sx={{
           alignItems: "center",
           paddingX: { xs: "5%", sm: "10%" },
-          marginTop: { xs: "35%", sm: "25%", lg: "10%", xl: "5%" },
+          marginTop: { xs: "10%", sm: "10%", lg: "10%", xl: "5%" },
         }}
       >
         <Typography
@@ -58,7 +56,6 @@ const BoardMemberCard = ({ boardCategory, list }) => {
               spacing={2}
               alignItems="center"
               marginY={2}
-              paddingX={1}
             >
               <Photo src={member.image} name={member.name} />
 
@@ -73,7 +70,7 @@ const BoardMemberCard = ({ boardCategory, list }) => {
                   <Typography variant="body2" color="#fff" fontStyle="italic">
                     {member.researchArea}
                   </Typography>
-                  <Typography variant="subtitle2" color="#fff">
+                  <Typography className="text-justify" variant="subtitle2" color="#fff">
                     {member.message}
                   </Typography>
                   {member.link && (

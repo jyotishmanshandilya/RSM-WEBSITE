@@ -12,8 +12,8 @@ const Photo = ({ src, name }) => {
       alt={`${name}`}
       sx={{
         borderRadius: "5%",
-        height: "180px",
-        maxWidth: "180px",
+        height: "250px",
+        maxWidth: "300px",
         border: "1px solid #e3e3e3",
         marginTop: "2%",
       }}
@@ -23,23 +23,19 @@ const Photo = ({ src, name }) => {
 
 const index = () => {
   return (
-    <Box sx={{ backgroundColor: "#1c1c1ce1", opacity: "90%" }}>
-      <Nav />
+    <Box sx={{ backgroundColor: "#1c1c1ce1", opacity: "90%", paddingTop:'8em' }}>
       <Typography
-        variant="h1"
+        variant="h2"
         fontSize={"normal"}
         align="center"
-        sx={{ color: "#7BD9C6", marginTop: "10%" }}
+        sx={{ color: "#ffff" }}
       >
         Events
       </Typography>
-      <Stack direction="column" alignContent={"center"}>
+      <Stack direction="column" alignContent={"center"} className="lg:p-24 p-5 mx-auto">
         {eventArray.map((event) => {
           return (
             <Box
-              sx={{
-                margin: "3%",
-              }}
               alignContent={"center"}
             >
               <Stack
@@ -58,7 +54,7 @@ const index = () => {
                     {event.title}
                   </Typography>
                   <Typography variant="body2">Time : {event.time}</Typography>
-                  <Typography variant="subtitle1" sx={{ color: "grey" }}>
+                  <Typography variant="subtitle1" sx={{ color: "grey" }} className="text-justify">
                     {event.para1}
                     {"\n\n"}
                     {event.para2}

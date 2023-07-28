@@ -184,7 +184,7 @@ const societyMembers = [
     ],
   },
   {
-    domain: "Artificaial Intelligence",
+    domain: "Artificial Intelligence",
     members: [
       "Pratinav Seth",
       "Ananya Gupta",
