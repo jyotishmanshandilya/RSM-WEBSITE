@@ -24,46 +24,7 @@ const responsiveStyles = {
 
 const page = () => {
   return (
-    // <>
-    //   <Stack direction="column" alignContent="center">
-    //     <Box sx={{}}>
-    //       <Nav />
-    //     </Box>
-    //     <Box>
-    //       <AppBar
-    //         sx={{
-    //           mt: { xs: 10, sm: 11, md: 12, lg: 10 },
-    //           ...responsiveStyles,
-    //           zIndex: "0",
-    //         }}
-    //         // position="fixed"
-    //       >
-    //         <Typography
-    //           sx={{
-    //             flexGrow: 1,
-    //             textAlign: { xs: "center", sm: "left" },
-    //             color: "white",
-    //           }}
-    //           variant="h5"
-    //         >
-    //           Our Team
-    //         </Typography>
-    //         <Typography textAlign={{ xs: "center", sm: "right" }}>
-    //           <Link href={`/`}>Home</Link> / Team
-    //         </Typography>
-    //       </AppBar>
-    //     </Box>
-    //     <BoardMemberCard
-    //       boardCategory={"executive board"}
-    //       list={executiveBoard}
-    //     />
-    //     <BoardMemberCard
-    //       boardCategory={"TECHNICAL TEAM"}
-    //       list={technicalTeam}
-    //     />
-    //   </Stack>
-    // </>
-    <>
+    <Box sx={{ backgroundColor: "#1c1c1ce1", opacity: "90%" }}>
       <Stack direction="column" alignContent="center">
         <Box sx={{}}>
           <Nav />
@@ -113,7 +74,7 @@ const page = () => {
         />
       </Stack>
       <DropdownMenu title={"Society Members"} items={societyMembers} />
-    </>
+    </Box>
   );
 };
 

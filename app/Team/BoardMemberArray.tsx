@@ -204,7 +204,7 @@ const societyMembers = [
     ],
   },
   {
-    domain: "Robaotics",
+    domain: "Robotics",
     members: ["Hirakjyoti Roy", "Vyshnav D N"],
   },
   {
@@ -228,10 +228,6 @@ const societyMembers = [
     members: ["Anwesha Varma", "Saurabh", "Ujjwal Sharma", "Kanak Agarwal"],
   },
   {
-    domain: "Renewable Energy and Heat Transfer",
-    members: ["Ramit Kumar"],
-  },
-  {
     domain: "Mathematics",
     members: ["Karthik Prabhu Bantwal", "Ashrith Sagar", "Saurav Sabu"],
   },
@@ -249,6 +245,10 @@ const societyMembers = [
       "Naomi Ann Thomas",
       "Siya",
     ],
+  },
+  {
+    domain: "Renewable Energy and Heat Transfer",
+    members: ["Ramit Kumar"],
   },
 ];
 export { executiveBoard, technicalTeam, societyMembers };

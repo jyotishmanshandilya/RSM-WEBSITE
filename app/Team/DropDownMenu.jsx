@@ -81,11 +81,12 @@ const DropdownMenu = ({ title, items }) => {
             return (
               <>
                 <Box
-                // sx={{
-                //   "&:hover": {
-                //     backgroundColor: "#233D33",
-                //   },
-                // }}
+                  // sx={{
+                  //   "&:hover": {
+                  //     backgroundColor: "#233D33",
+                  //   },
+                  // }}
+                  sx={{ marginX: "2%" }}
                 >
                   <hr style={{ backgroundColor: "#233D33" }} />
                   <Accordion sx={{ background: "transparent" }}>
