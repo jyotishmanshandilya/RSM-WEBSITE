@@ -18,11 +18,14 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Dropdown from "./Dropdown";
 import Link from "next/link";
+// import { makeStyles } from "@material-ui/core/styles";
+
 
 const drawerWidth = 240;
-const navItems = ["Team", "Projects", "Events", "Newletter", "Policies"];
+const navItems = ["Team", "Events", "Policies"];
 
 function DrawerAppBar(props) {
+  // const classes = makeStyles();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -74,7 +77,7 @@ function DrawerAppBar(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      <AppBar className="bg-[#0a0119]" component="nav">
+      <AppBar component="nav" style={{ backgroundColor: "#0a0119" }}>
         <Toolbar>
           <IconButton
             color="inherit"
