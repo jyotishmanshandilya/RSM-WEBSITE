@@ -7,6 +7,7 @@ import {
   CardContent,
   CardMedia,
 } from "@mui/material";
+import Link from "next/link";
 import { societyMembers } from "./BoardMemberArray";
 import DropDownMenue from "./DropDownMenu";
 
@@ -75,6 +76,19 @@ const BoardMemberCard = ({ boardCategory, list }) => {
                   <Typography variant="subtitle2" color="#fff">
                     {member.message}
                   </Typography>
+                  {member.link && (
+                    <Typography variant="subtitle2" color="#fff">
+                      <Link
+                        href={member.link}
+                        style={{
+                          textDecoration: "underline",
+                          color: "#96B3F5",
+                        }}
+                      >
+                        More details
+                      </Link>
+                    </Typography>
+                  )}
                 </CardContent>
               </Stack>
             </Stack>
