@@ -7,7 +7,24 @@ import {
   CardContent,
   CardMedia,
 } from "@mui/material";
-// const [key, setKey] = useState(0);
+import { societyMembers } from "./BoardMemberArray";
+import DropDownMenue from "./DropDownMenu";
+
+const Photo = ({ src, name }) => {
+  return (
+    <CardMedia
+      component="img"
+      image={`/${src}`}
+      alt={`${name}`}
+      sx={{
+        borderRadius: "50%",
+        height: "180px",
+        width: "180px",
+        border: "1px solid #e3e3e3",
+      }}
+    />
+  );
+};
 
 const BoardMemberCard = ({ boardCategory, list }) => {
   return (
@@ -15,56 +32,51 @@ const BoardMemberCard = ({ boardCategory, list }) => {
       <Box
         sx={{
           alignItems: "center",
-          paddingX: { xs: "5%", sm: "5%" },
-          marginTop: { xs: "50%", sm: "25%", lg: "20%", xl: "10%" },
+          paddingX: { xs: "5%", sm: "10%" },
+          marginTop: { xs: "35%", sm: "25%", lg: "10%", xl: "5%" },
         }}
       >
         <Typography
           variant="body2"
           fontWeight="normal"
-          fontSize={30}
+          fontSize={40}
           color="white"
           align="center"
         >
           {boardCategory.toUpperCase()}
         </Typography>
 
-        {list.map((member) => {
+        {list.map((member, index) => {
           return (
             <Stack
               key={member.name}
-              direction={{ xs: "column", md: "row" }}
+              direction={{
+                xs: "column",
+                md: index % 2 === 0 ? "row" : "row-reverse",
+              }}
               spacing={2}
               alignItems="center"
               marginY={2}
-              paddingX={{ xs: "5%", sm: "10%" }}
+              paddingX={1}
             >
-              <CardMedia
-                component="img"
-                image={`/${member.image}`}
-                alt={`${member.name}`}
-                sx={{
-                  borderRadius: "50%",
-                  height: "180px",
-                  width: "180px",
-                  border: "1px solid #e3e3e3",
-                }}
-              />
+              <Photo src={member.image} name={member.name} />
 
-              <CardContent>
-                <Typography variant="h5" component="div" color="#fff">
-                  {member.name}
-                </Typography>
-                <Typography variant="h6" component="div" color="#7BD9C6">
-                  {member.post}
-                </Typography>
-                <Typography variant="body2" color="#fff" fontStyle="italic">
-                  {member.researchArea}
-                </Typography>
-                <Typography variant="subtitle2" color="#fff">
-                  {member.message}
-                </Typography>
-              </CardContent>
+              <Stack alignItems="center">
+                <CardContent>
+                  <Typography variant="h5" component="div" color="#fff">
+                    {member.name}
+                  </Typography>
+                  <Typography variant="h6" component="div" color="#7BD9C6">
+                    {member.post}
+                  </Typography>
+                  <Typography variant="body2" color="#fff" fontStyle="italic">
+                    {member.researchArea}
+                  </Typography>
+                  <Typography variant="subtitle2" color="#fff">
+                    {member.message}
+                  </Typography>
+                </CardContent>
+              </Stack>
             </Stack>
           );
         })}

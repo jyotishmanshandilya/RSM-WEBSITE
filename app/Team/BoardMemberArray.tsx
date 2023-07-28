@@ -169,4 +169,86 @@ const technicalTeam = [
     image: "Udeet_Mittal.png",
   },
 ];
-export { executiveBoard, technicalTeam };
+const societyMembers = [
+  {
+    domain: "Artificaial Intelligence",
+    members: [
+      "Aaron Jomy",
+      "Aditya Choubey",
+      "Ananya Gupta",
+      "Ayush Kumar",
+      "Arnav Agrawal",
+      "Deepesh Garg",
+      "Pratinav Seth",
+      "Neetigya Poddar",
+      "Sai Anish Malla",
+      "Udit Amin",
+      "Utkarsh Anand",
+    ],
+  },
+  {
+    domain: "Chemical Engineering",
+    members: [
+      "Sanskruti Choudhary",
+      "Devangshi Debraj",
+      "Advaith Nair",
+      "Asmi Mohanty",
+      "Aakhash H",
+      "Gaurav Agarwal",
+      "P.V. Hanukrutha",
+      "Koena Maji",
+      "Sri Moulya",
+      "Mridul Agarwal",
+      "Vaishnavi Karkare",
+      "Kaushik Samak",
+    ],
+  },
+  {
+    domain: "Robaotics",
+    members: ["Hirakjyoti Roy", "Vyshnav D N"],
+  },
+  {
+    domain: "Cybersecurity",
+    members: ["Kumud Rathore", "Urja Shah", "Prabhakar Dev"],
+  },
+  {
+    domain: "Electronics",
+    members: ["Nilabha Das", "Saksham", "Abhinav", "Yahas", "Eraina"],
+  },
+  {
+    domain: "Humanities and Psychology",
+    members: ["Shreya Sharma", "Abhinandan Maiti"],
+  },
+  {
+    domain: "Physics",
+    members: ["Udeet Mittal", "Aarushi Dhanuka", "SG Siddanth"],
+  },
+  {
+    domain: "Aeronautical",
+    members: ["Anwesha Varma", "Saurabh", "Ujjwal Sharma", "Kanak Agarwal"],
+  },
+  {
+    domain: "Renewable Energy and Heat Transfer",
+    members: ["Ramit Kumar"],
+  },
+  {
+    domain: "Mathematics",
+    members: ["Karthik Prabhu Bantwal", "Ashrith Sagar", "Saurav Sabu"],
+  },
+  {
+    domain: "Biotechnology",
+    members: [
+      "Suhani Kabra",
+      "Amitha Kamath",
+      "Nidhi Padiyar",
+      "Kiran Firdous Fatima",
+      "Srushti Rao",
+      "Meenakshi Harikumar",
+      "Amanda Binu",
+      "Ruby Roy",
+      "Naomi Ann Thomas",
+      "Siya",
+    ],
+  },
+];
+export { executiveBoard, technicalTeam, societyMembers };
