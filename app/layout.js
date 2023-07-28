@@ -1,7 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import ParticleBG from '../components/ParticleBG';
-import { StyledEngineProvider } from "@mui/material/styles";
+import Nav from "../components/Nav";
+import Footer from '../components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,14 +13,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // <StyledEngineProvider injectFirst>
     <html lang="en">
       <body className={inter.className}>
+        <Nav/>
         {children}
         <ParticleBG />
+        <Footer/>
       </body>
       
     </html>
-      // </StyledEngineProvider>
   )
 }
