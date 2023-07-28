@@ -22,7 +22,7 @@ import Link from "next/link";
 
 
 const drawerWidth = 240;
-const navItems = ["Team", "Events", "Policies"];
+const navItems = ["Team", "Events"];
 
 function DrawerAppBar(props) {
   // const classes = makeStyles();

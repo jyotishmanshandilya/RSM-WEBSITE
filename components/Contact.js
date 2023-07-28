@@ -86,7 +86,7 @@ function ContactInfo(){
 
 function Contact() {
   return (
-    <section className='lg:pt-20 mt-10 bg-[#222222ef] opacity-90 lg:p-24 p-10'>
+    <section id='Contact' className='lg:pt-20 mt-10 bg-[#222222ef] opacity-90 lg:p-24 p-10'>
         <div className='grid lg:grid-cols-2 lg:max-w-screen-lg mx-auto'>
             <ContactInfo/>
             <ContactForm />
