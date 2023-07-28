@@ -62,7 +62,7 @@ const index = () => {
                     {event.para1}
                     {"\n\n"}
                     {event.para2}
-                    {"\n\n"}
+                    {"\n"}
                     {event.para3}
                   </Typography>
                   {event.recordinglink && (
