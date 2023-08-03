@@ -114,7 +114,7 @@ const technicalTeam = [
   },
   {
     name: "SHISHIR SEN",
-    post: "EXPERTISE HEAD - GRAPHICS AND WEB DEVELOPMENT",
+    post: "HEAD - GRAPHICS",
     researchArea: "Product Development, Satellite Tech, Aerospace",
     message:
       "Shishir is a designer with a talent for creating clean and innovative designs. Alongside his design expertise, he also specializes in web development and aspires to become a successful product manager. Beyond his professional pursuits, Shishir has a diverse range of interests including a fascination with the aerospace industry, a love for basketball, and a passion for alt-rock music. Shishir's fiery enthusiasm drives him both on the court and at his screen, whether he's dribbling the ball or bringing his creative ideas to life",
@@ -130,7 +130,7 @@ const technicalTeam = [
   },
   {
     name: "TANMAY GOSWAMI",
-    post: "EXPERTISE HEAD - HUMANITIES AND PSYCHOLOGY",
+    post: "MENTOR - HUMANITIES AND PSYCHOLOGY",
     researchArea:
       "Psychology, History, Policy Research, Psychometry, Aerodynamics, Art, Literature, Humanities",
     message:
@@ -139,7 +139,7 @@ const technicalTeam = [
   },
   {
     name: "UJJWAL SHARMA",
-    post: "EXPERTISE HEAD - MATERIAL SCIENCES",
+    post: "MENTOR - MATERIAL SCIENCES",
     researchArea: "Structural Engineering and Concrete Technology",
     message:
       "A civil engineering student who is not your average academic, Having a unique blend of interests that make him stand out in a crowd. With a love for all genres of music and a passion for the Harry Potter series. A quirky personality and full of weird set of experiences.",
@@ -168,6 +168,13 @@ const technicalTeam = [
     message:
       "`A tech enthusiast and a nerd over all things Physics. A die-hard Nolan simp— in his free time you can probably find him watching 'The Dark Knight' for the 27th time. Finds writing self descriptions in the third person to be quite an ego boost`",
     image: "Udeet_Mittal.png",
+  },
+  {
+    name: "Anush Ravishankar",
+    post: "MENTOR - WEB DEVELOPMENT",
+    researchArea: "",
+    message: "",
+    image: "RSM_logo.jpeg",
   },
 ];
 const societyMembers = [
@@ -230,15 +237,6 @@ const societyMembers = [
       "PV Hanukrutha",
       "Mridul Agarwal",
       "Mukund Kedia",
-    ],
-  },
-  {
-    domain: "Cybersecurity",
-    members: [
-      "Kumud Rathore",
-      "Piyush Mohapatra",
-      "Prabhakar Dev",
-      "Urja Shah",
     ],
   },
   {
