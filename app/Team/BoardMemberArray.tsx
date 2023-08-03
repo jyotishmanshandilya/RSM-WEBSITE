@@ -240,15 +240,6 @@ const societyMembers = [
     ],
   },
   {
-    domain: "Cybersecurity",
-    members: [
-      "Kumud Rathore",
-      "Piyush Mohapatra",
-      "Prabhakar Dev",
-      "Urja Shah",
-    ],
-  },
-  {
     domain: "Robotics",
     members: [
       "Maanvi Singh",
