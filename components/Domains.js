@@ -9,7 +9,7 @@ const Domains = () => {
         <br/>
         <br/>
         <div className='flex justify-center'>
-            <div className='bg-[#1c1c1c] p-5 lg:max-w-lg p-5 shadow-3xl shadow-slate-700 transition-shadow ease-in-out hover:shadow-none rounded-2xl border-2 border-transparent'>
+            <div className='bg-[#1c1c1c] p-5 lg:max-w-lg shadow-3xl shadow-slate-700 transition-shadow ease-in-out hover:shadow-none rounded-2xl border-2 border-transparent'>
                 <Image className='mx-auto' src={'/AI.png'} width={100} height={100}/>
                 <h2 className='text-center text-white text-2xl'>ARTIFICIAL INTELLIGENCE</h2>
                 <p className='text-center text-base'>AI is an interdisciplinary science with multiple approaches. <br/> 
